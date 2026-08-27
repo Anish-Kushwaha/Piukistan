@@ -1,72 +1,1317 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050303">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="PIUKISTAN — Kingdom of the Damned. A dark atmospheric journey through the cursed realm ruled by Princess Piuu.">
+<meta name="keywords" content="Piukistan, Piuu, horror, dark fantasy, gothic, cursed kingdom, Bone Throne, haunted forest">
+<meta name="author" content="Piukistan">
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:title" content="PIUKISTAN — Kingdom of the Damned">
+<meta property="og:description" content="Enter the sunless kingdom beyond the last light.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PIUKISTAN — Kingdom of the Damned">
+<meta name="twitter:description" content="The throne waits. The shadows remember."
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>PIUKISTAN — Kingdom of the Damned</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Cinzel:wght@400;600;700;900&family=Eater&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Cinzel:wght@400;500;600;700;800;900&family=Eater&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#040404;--ink:#e7e0d7;--muted:#a69c92;--blood:#8b0000;--blood2:#d10d0d;--line:#2a2420;--shadow:0 24px 80px rgba(0,0,0,.75)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#020202;color:var(--ink);font-family:'IM Fell English',serif;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:-3;background-image:url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=85');background-size:cover;background-position:center;filter:saturate(.55) contrast(1.12) brightness(.48);transform:scale(1.03)}
-body::after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(circle at 50% 35%,transparent 0 30%,rgba(0,0,0,.25) 60%,rgba(0,0,0,.8) 100%)}
-::selection{background:#710000;color:#fff}.wrap{width:min(1180px,92vw);margin:auto}.section{padding:110px 0;position:relative}.section h2{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:.09em;font-size:clamp(2rem,5vw,4rem);margin:0 0 25px;color:#e9e0d5;text-shadow:0 0 25px rgba(150,0,0,.3)}.eyebrow{font-family:Eater,cursive;color:#b58c80;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}.lead{font-size:1.22rem;line-height:1.85;color:#d3cac2;max-width:850px}.fade{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.fade.show{opacity:1;transform:none}
-#embers{position:fixed;inset:0;pointer-events:none;z-index:4;mix-blend-mode:screen}.fog,.fog2{position:fixed;inset:auto -15% 0;height:55vh;pointer-events:none;z-index:3;background:radial-gradient(ellipse at 35% 45%,rgba(210,210,210,.08),transparent 55%),radial-gradient(ellipse at 70% 55%,rgba(180,180,180,.06),transparent 50%);filter:blur(18px);animation:fog 28s ease-in-out infinite alternate}.fog2{bottom:18%;opacity:.65;animation-duration:36s;animation-delay:-8s}.screen-flash{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:20;animation:flash 11s infinite}
-header{position:fixed;top:0;left:0;right:0;z-index:15;background:linear-gradient(180deg,rgba(0,0,0,.78),transparent);padding:17px 0}.nav{display:flex;justify-content:space-between;align-items:center}.brand{font:700 1rem Cinzel,serif;letter-spacing:.16em;color:#ddd}.links{display:flex;gap:22px}.links a{color:#c5bcb5;text-decoration:none;font:600 .75rem Cinzel,serif;letter-spacing:.12em;text-transform:uppercase}.links a:hover{color:#fff}
-.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:130px 0 80px;position:relative}.hero-inner{max-width:1000px}.hero h1{font-family:Butcherman,cursive;font-size:clamp(4.6rem,16vw,12rem);line-height:.9;letter-spacing:.04em;color:#8f0707;margin:0;text-shadow:0 0 12px rgba(255,0,0,.18),0 0 48px rgba(150,0,0,.28);animation:titleFlicker 4.8s steps(1,end) infinite}.tag{font:700 clamp(1.2rem,3vw,2rem) Cinzel,serif;letter-spacing:.22em;text-transform:uppercase;margin-top:25px}.hero .subtitle{font-size:clamp(1.05rem,2.2vw,1.35rem);line-height:1.8;color:#d5cbc1;max-width:840px;margin:24px auto}.hero strong{color:#fff}.enter{display:inline-flex;align-items:center;gap:10px;border:1px solid #7a1717;background:rgba(27,0,0,.46);color:#f0dfd6;padding:14px 24px;border-radius:2px;font:700 .82rem Cinzel,serif;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 28px rgba(120,0,0,.22);transition:.25s}.enter:hover{transform:translateY(-2px);background:rgba(95,0,0,.35);box-shadow:0 0 34px rgba(180,0,0,.32)}
-.eyes{position:absolute;inset:11% 0 auto;height:56%;pointer-events:none;overflow:hidden}.eye-pair{position:absolute;width:36px;height:12px;opacity:0;filter:drop-shadow(0 0 9px rgba(255,0,0,.9));animation:eyes 3.8s ease-in-out forwards}.eye-pair::before,.eye-pair::after{content:"";position:absolute;top:3px;width:10px;height:6px;background:#e00000;border-radius:50%;box-shadow:0 0 11px #f00}.eye-pair::before{left:3px}.eye-pair::after{right:3px}
-.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}.cardbox{background:linear-gradient(145deg,rgba(13,11,10,.84),rgba(5,4,4,.7));border:1px solid var(--line);box-shadow:var(--shadow);padding:34px}.lore-art{min-height:390px;border:1px solid #2b211d;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.72)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80') center/cover;position:relative;overflow:hidden}.lore-art::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,transparent 0 18%,rgba(0,0,0,.6) 72%)}
-.princess{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}.portrait{min-height:560px;position:relative;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.8)),url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85') center/cover;border:1px solid #332825;box-shadow:var(--shadow);animation:portraitJitter 7s infinite}.portrait::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.018) 4px 5px);mix-blend-mode:screen}.portrait::after{content:"PIUU";position:absolute;bottom:18px;left:18px;font:1rem Cinzel,serif;letter-spacing:.5em;color:#cebdb2}.powers{display:grid;gap:12px;margin-top:26px}.power{padding:14px 16px;border-left:2px solid #6d0b0b;background:rgba(16,10,8,.68);color:#d7cdc4}.power strong{color:#f0ded6;font-family:Cinzel,serif}
-.provinces{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.region{min-height:290px;position:relative;display:flex;align-items:flex-end;overflow:hidden;border:1px solid #312924;box-shadow:var(--shadow);background-size:cover;background-position:center}.region::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88))}.region .content{position:relative;padding:24px;z-index:1}.region h3{font:700 1.15rem Cinzel,serif;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px}.region p{margin:0;color:#c7beb7;line-height:1.55}.r1{background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80')}.r2{background-image:url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=80')}.r3{background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=80')}.r4{background-image:url('https://images.unsplash.com/photo-1518155317743-a8ff43ea6b5b?auto=format&fit=crop&w=1000&q=80')}.r5{background-image:url('https://images.unsplash.com/photo-1509023889235-1bbdfb3f5f11?auto=format&fit=crop&w=1000&q=80')}.r6{background-image:url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1000&q=80')}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery figure{margin:0;height:260px;overflow:hidden;border:1px solid #322923;background:#0b0b0b}.gallery img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.55) contrast(1.12) brightness(.68);transition:transform .7s ease,filter .7s ease}.gallery figure:hover img{transform:scale(1.06);filter:saturate(.75) contrast(1.1) brightness(.82)}
-.court{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.creature{padding:26px;background:rgba(9,7,7,.72);border:1px solid #2d2521;box-shadow:var(--shadow)}.creature .emoji{font-size:2rem;filter:grayscale(.3)}.creature h3{font:700 1.05rem Cinzel,serif;margin:12px 0 8px}.creature p{margin:0;color:#bfb5ac;line-height:1.55}.oath{text-align:center;padding:130px 20px}.oath blockquote{font:italic clamp(1.55rem,4vw,2.9rem) 'IM Fell English',serif;line-height:1.45;max-width:930px;margin:35px auto 0;color:#e8dfd7}.sig{font:600 .8rem Cinzel,serif;letter-spacing:.3em;color:#8b8178;margin-top:26px;text-transform:uppercase}
-footer{padding:30px 0 45px;border-top:1px solid rgba(70,52,45,.5);text-align:center;background:linear-gradient(180deg,transparent,rgba(0,0,0,.6))}.foot-title{font:700 1rem Cinzel,serif;letter-spacing:.18em;text-transform:uppercase}.year{color:#7f756d;font-size:.85rem;margin-top:8px}
-.audio{position:fixed;right:18px;bottom:18px;z-index:18;width:46px;height:46px;border-radius:50%;border:1px solid #6b1111;background:rgba(8,3,3,.85);color:#eee;cursor:pointer;box-shadow:0 0 18px rgba(110,0,0,.28);font-size:1rem}.audio.on{animation:pulse 1.7s infinite}
-.spider{position:fixed;left:8%;top:18%;font-size:1.5rem;opacity:.45;z-index:5;animation:spider 11s ease-in-out infinite}.ghost{position:fixed;right:8%;bottom:14%;font-size:2.5rem;opacity:.16;z-index:5;animation:ghost 9s ease-in-out infinite}
-@keyframes fog{from{transform:translateX(-4%) scale(1.02)}to{transform:translateX(7%) scale(1.08)}}@keyframes titleFlicker{0%,12%,14%,22%,56%,100%{opacity:1}13%,21%,55%{opacity:.42}57%{opacity:.82}58%{opacity:.35}}@keyframes eyes{0%{opacity:0;transform:scale(.6)}15%{opacity:1}70%{opacity:1}100%{opacity:0;transform:scale(1.2)}}@keyframes portraitJitter{0%,95%,100%{transform:translate(0)}96%{transform:translate(-1px,1px)}97%{transform:translate(1px,-1px)}98%{transform:translate(-2px,0)}}@keyframes flash{0%,93%,100%{opacity:0}94%{opacity:.04}95%{opacity:0}}@keyframes pulse{50%{box-shadow:0 0 28px rgba(180,0,0,.52)}}@keyframes spider{0%,100%{transform:translate(0,0) rotate(-7deg)}50%{transform:translate(18px,70px) rotate(8deg)}}@keyframes ghost{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-22px) translateX(-12px)}}
-@media(max-width:900px){.links{display:none}.grid2,.princess{grid-template-columns:1fr}.portrait{min-height:460px}.provinces,.gallery,.court{grid-template-columns:1fr 1fr}.section{padding:85px 0}}
-@media(max-width:620px){.hero{padding-top:115px}.hero h1{font-size:clamp(3.8rem,22vw,7rem)}.provinces,.gallery,.court{grid-template-columns:1fr}.gallery figure{height:235px}.cardbox{padding:25px}.section h2{font-size:2rem}.lead{font-size:1.08rem}.audio{right:14px;bottom:14px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fog,.fog2,.screen-flash,.hero h1,.portrait,.spider,.ghost,.audio.on{animation:none}.fade{opacity:1;transform:none;transition:none}.gallery img{transition:none}}
+:root {
+  --void:#020202;
+  --night:#050505;
+  --blood:#650606;
+  --blood-bright:#a20a0a;
+  --blood-hot:#d01616;
+  --bone:#ded5cb;
+  --ash:#aaa098;
+  --fog:#c6c3bd;
+  --line:#302823;
+  --panel:rgba(7,6,6,.78);
+  --panel-strong:rgba(8,5,5,.91);
+  --shadow:0 30px 90px rgba(0,0,0,.75);
+  --glow:0 0 28px rgba(164,0,0,.28);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--bone);
+  background:var(--void);
+  font-family:'IM Fell English',Georgia,serif;
+}
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-6;
+  background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2400&q=90');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  filter:saturate(.45) contrast(1.18) brightness(.56);
+  transform:scale(1.04);
+}
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-5;
+  pointer-events:none;
+  background:radial-gradient(circle at 50% 40%,rgba(0,0,0,.02) 0%,rgba(0,0,0,.08) 45%,rgba(0,0,0,.65) 100%);
+}
+::selection { background:#7b0000;color:white; }
+a { color:inherit; }
+button { font:inherit; }
+.skip-link {
+  position:absolute;
+  left:-9999px;
+}
+.skip-link:focus {
+  left:1rem;
+  top:1rem;
+  z-index:100;
+  padding:.8rem 1rem;
+  background:#000;
+  border:1px solid var(--blood-bright);
+}
+.container {
+  width:min(1180px,92vw);
+  margin-inline:auto;
+}
+.section {
+  position:relative;
+  padding:120px 0;
+}
+.section::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:min(1180px,92vw);
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,#3b2b24,transparent);
+}
+.section-kicker {
+  margin:0 0 14px;
+  font-family:Eater,cursive;
+  font-size:.78rem;
+  letter-spacing:.2em;
+  color:#b48c82;
+  text-transform:uppercase;
+}
+.section-title {
+  margin:0 0 30px;
+  max-width:1000px;
+  font-family:Cinzel,serif;
+  font-size:clamp(2.2rem,5vw,4.7rem);
+  line-height:1.05;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:#ebe0d6;
+  text-shadow:0 0 30px rgba(140,0,0,.25);
+}
+.section-subtitle {
+  max-width:860px;
+  margin:0;
+  color:#cbc2b9;
+  font-size:1.15rem;
+  line-height:1.9;
+}
+.reveal {
+  opacity:0;
+  transform:translateY(42px);
+  transition:opacity .9s ease,transform .9s cubic-bezier(.22,.61,.36,1);
+}
+.reveal.is-visible {
+  opacity:1;
+  transform:none;
+}
+#emberCanvas {
+  position:fixed;
+  inset:0;
+  z-index:8;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  mix-blend-mode:screen;
+}
+.fog-layer,
+.fog-layer::before,
+.fog-layer::after {
+  position:fixed;
+  inset:auto -20vw 0;
+  height:60vh;
+  pointer-events:none;
+}
+.fog-layer {
+  z-index:5;
+  opacity:.44;
+  filter:blur(22px);
+  background:
+    radial-gradient(ellipse at 25% 55%,rgba(235,235,235,.09),transparent 48%),
+    radial-gradient(ellipse at 70% 46%,rgba(210,210,210,.07),transparent 52%);
+  animation:fog-drift 32s ease-in-out infinite alternate;
+}
+.fog-layer::before {
+  content:"";
+  bottom:18vh;
+  opacity:.65;
+  filter:blur(30px);
+  background:radial-gradient(ellipse at 65% 55%,rgba(255,255,255,.07),transparent 54%);
+  animation:fog-drift-reverse 42s ease-in-out infinite alternate;
+}
+.fog-layer::after {
+  content:"";
+  bottom:-8vh;
+  opacity:.4;
+  filter:blur(42px);
+  background:radial-gradient(ellipse at 42% 58%,rgba(200,200,200,.09),transparent 52%);
+  animation:fog-drift 48s ease-in-out infinite alternate-reverse;
+}
+.screen-glitch {
+  position:fixed;
+  inset:0;
+  z-index:20;
+  pointer-events:none;
+  opacity:0;
+  background:rgba(255,255,255,.03);
+  animation:screen-flash 15s infinite;
+}
+.site-header {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:15;
+  padding:18px 0;
+  background:linear-gradient(180deg,rgba(0,0,0,.84),rgba(0,0,0,0));
+  backdrop-filter:blur(2px);
+}
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand {
+  font-family:Cinzel,serif;
+  font-weight:800;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+  font-size:.85rem;
+  color:#ddd0c7;
+}
+.nav-links {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:18px;
+}
+.nav-links a {
+  color:#bdb2aa;
+  text-decoration:none;
+  font:600 .7rem Cinzel,serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  transition:color .2s ease,text-shadow .2s ease;
+}
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color:#fff;
+  text-shadow:0 0 18px rgba(255,0,0,.45);
+}
+.hero {
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  position:relative;
+  padding:150px 0 90px;
+  text-align:center;
+}
+.hero::before {
+  content:"";
+  position:absolute;
+  left:50%;
+  top:12%;
+  width:min(850px,86vw);
+  height:550px;
+  transform:translateX(-50%);
+  pointer-events:none;
+  background:radial-gradient(ellipse,rgba(255,0,0,.05),transparent 70%);
+}
+.hero-content { position:relative;z-index:2;max-width:1080px; }
+.pre-title {
+  margin:0 0 20px;
+  color:#af8b81;
+  font-family:Eater,cursive;
+  font-size:.86rem;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+}
+.hero-title {
+  margin:0;
+  font-family:Butcherman,cursive;
+  font-size:clamp(4.6rem,16vw,12.5rem);
+  line-height:.84;
+  letter-spacing:.035em;
+  color:#930707;
+  text-shadow:
+    0 0 8px rgba(255,0,0,.22),
+    0 0 25px rgba(160,0,0,.24),
+    0 0 70px rgba(100,0,0,.2);
+  animation:title-flicker 6s steps(1,end) infinite;
+}
+.hero-rule {
+  width:min(440px,70vw);
+  height:1px;
+  margin:28px auto 22px;
+  background:linear-gradient(90deg,transparent,#731010,transparent);
+}
+.hero-tag {
+  margin:0;
+  font-family:Cinzel,serif;
+  font-weight:700;
+  font-size:clamp(1.15rem,2.8vw,2rem);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#ebe2da;
+}
+.hero-description {
+  max-width:860px;
+  margin:24px auto 30px;
+  color:#d0c6bd;
+  font-size:clamp(1.02rem,2vw,1.28rem);
+  line-height:1.95;
+}
+.hero-description strong { color:#fff; }
+.enter-button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:50px;
+  padding:0 25px;
+  cursor:pointer;
+  color:#ece1d8;
+  background:rgba(35,3,3,.58);
+  border:1px solid #761212;
+  border-radius:2px;
+  font-family:Cinzel,serif;
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  box-shadow:0 0 24px rgba(130,0,0,.18);
+  transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
+}
+.enter-button:hover,
+.enter-button:focus-visible {
+  transform:translateY(-2px);
+  background:rgba(100,0,0,.3);
+  box-shadow:0 0 35px rgba(170,0,0,.3);
+}
+.hero-status {
+  margin-top:20px;
+  font-size:.75rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#7d746d;
+}
+.eye-field {
+  position:absolute;
+  inset:10% 0 8%;
+  z-index:1;
+  overflow:hidden;
+  pointer-events:none;
+}
+.eye-pair {
+  position:absolute;
+  width:48px;
+  height:15px;
+  opacity:0;
+  filter:drop-shadow(0 0 10px rgba(255,0,0,.9));
+  animation:eyes-appear 4.6s ease-in-out forwards;
+}
+.eye-pair::before,
+.eye-pair::after {
+  content:"";
+  position:absolute;
+  top:4px;
+  width:11px;
+  height:6px;
+  border-radius:100%;
+  background:#ea0000;
+  box-shadow:0 0 11px #f00,0 0 24px rgba(255,0,0,.65);
+}
+.eye-pair::before { left:4px; }
+.eye-pair::after { right:4px; }
+.scroll-cue {
+  position:absolute;
+  bottom:28px;
+  left:50%;
+  transform:translateX(-50%);
+  color:#81766e;
+  font:600 .66rem Cinzel,serif;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.scroll-cue::after {
+  content:"";
+  display:block;
+  width:1px;
+  height:38px;
+  margin:10px auto 0;
+  background:linear-gradient(#6f1111,transparent);
+  animation:cue-pulse 2s ease-in-out infinite;
+}
+.two-column {
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:48px;
+  align-items:stretch;
+}
+.panel {
+  padding:34px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,rgba(12,9,9,.86),rgba(4,3,3,.7));
+  box-shadow:var(--shadow);
+}
+.panel p {
+  margin:0 0 18px;
+  color:#c7beb6;
+  font-size:1.08rem;
+  line-height:1.9;
+}
+.panel p:last-child { margin-bottom:0; }
+.lore-visual {
+  min-height:510px;
+  border:1px solid #332822;
+  position:relative;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.77)),
+    url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=90') center/cover;
+}
+.lore-visual::after {
+  content:"THE SUNLESS ROAD";
+  position:absolute;
+  right:18px;
+  bottom:18px;
+  font:700 .65rem Cinzel,serif;
+  letter-spacing:.2em;
+  color:rgba(225,215,207,.42);
+}
+.story-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:45px;
+}
+.story-card {
+  padding:24px;
+  border:1px solid var(--line);
+  background:rgba(5,4,4,.75);
+  box-shadow:var(--shadow);
+}
+.story-card .number {
+  color:#8d1717;
+  font:800 .75rem Cinzel,serif;
+  letter-spacing:.14em;
+}
+.story-card h3 {
+  margin:12px 0 10px;
+  font:700 1.08rem Cinzel,serif;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.story-card p {
+  margin:0;
+  color:#b9afa7;
+  line-height:1.7;
+}
+.princess-layout {
+  display:grid;
+  grid-template-columns:.88fr 1.12fr;
+  gap:58px;
+  align-items:start;
+}
+.piuu-portrait {
+  position:relative;
+  min-height:690px;
+  overflow:hidden;
+  border:1px solid #332724;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(0,0,0,.18) 30%,rgba(0,0,0,.92) 100%),
+    url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=90') center/cover;
+  box-shadow:var(--shadow);
+  animation:portrait-jitter 8s infinite;
+  isolation:isolate;
+}
+.piuu-portrait::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.45),transparent 42%,rgba(0,0,0,.4)),
+    radial-gradient(circle at 50% 32%,rgba(180,0,0,.1),transparent 33%),
+    repeating-linear-gradient(0deg,transparent 0 4px,rgba(255,255,255,.018) 5px 6px);
+  mix-blend-mode:screen;
+  pointer-events:none;
+}
+.piuu-portrait::after {
+  content:"PIUU • THE BONE QUEEN";
+  position:absolute;
+  z-index:2;
+  left:20px;
+  right:20px;
+  bottom:18px;
+  font:700 .7rem Cinzel,serif;
+  letter-spacing:.24em;
+  color:#d5c6bd;
+  text-shadow:0 2px 12px #000;
+}
+.piuu-intro {
+  margin:0 0 22px;
+  color:#ddd3ca;
+  font-size:1.22rem;
+  line-height:1.9;
+}
+.piuu-intro em { color:#fff; }
+.quote-box {
+  margin:28px 0;
+  padding:24px 28px;
+  border-left:2px solid #751111;
+  background:rgba(17,7,7,.7);
+  box-shadow:var(--shadow);
+}
+.quote-box blockquote {
+  margin:0;
+  color:#ded5cd;
+  font-size:1.35rem;
+  line-height:1.7;
+  font-style:italic;
+}
+.quote-box cite {
+  display:block;
+  margin-top:13px;
+  color:#837972;
+  font:600 .7rem Cinzel,serif;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.power-list {
+  display:grid;
+  gap:12px;
+  margin-top:28px;
+}
+.power-item {
+  display:grid;
+  grid-template-columns:70px 1fr;
+  gap:15px;
+  align-items:start;
+  padding:16px 18px;
+  border:1px solid #27201c;
+  background:rgba(7,6,6,.72);
+}
+.power-index {
+  color:#881414;
+  font:800 .74rem Cinzel,serif;
+  letter-spacing:.16em;
+}
+.power-item h3 {
+  margin:0 0 6px;
+  color:#e8ddd4;
+  font:700 1rem Cinzel,serif;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.power-item p {
+  margin:0;
+  color:#b7aea6;
+  line-height:1.65;
+}
+.legend-banner {
+  margin-top:42px;
+  padding:28px;
+  border-top:1px solid #2c211d;
+  border-bottom:1px solid #2c211d;
+  text-align:center;
+  background:rgba(4,3,3,.62);
+}
+.legend-banner p {
+  margin:0;
+  color:#c5bbb3;
+  font-size:1.08rem;
+  line-height:1.85;
+}
+.region-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:48px;
+}
+.region-card {
+  min-height:360px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  border:1px solid #342a25;
+  box-shadow:var(--shadow);
+  background-color:#0a0909;
+  background-size:cover;
+  background-position:center;
+  transition:transform .45s ease,border-color .45s ease;
+}
+.region-card:hover { transform:translateY(-5px);border-color:#6e1919; }
+.region-card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.18) 34%,rgba(0,0,0,.94) 100%);
+}
+.region-card::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 50% 40%,transparent,rgba(0,0,0,.36));
+  pointer-events:none;
+}
+.region-content {
+  position:relative;
+  z-index:2;
+  padding:26px;
+}
+.region-code {
+  font:800 .65rem Cinzel,serif;
+  letter-spacing:.18em;
+  color:#a33a36;
+}
+.region-card h3 {
+  margin:10px 0 10px;
+  color:#efe4da;
+  font:800 1.17rem Cinzel,serif;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.region-card p {
+  margin:0;
+  color:#c0b6ae;
+  line-height:1.62;
+}
+.region-1 { background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=90'); }
+.region-2 { background-image:url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=90'); }
+.region-3 { background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=90'); }
+.region-4 { background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=90'); }
+.region-5 { background-image:url('https://images.unsplash.com/photo-1518155317743-a8ff43ea6b5b?auto=format&fit=crop&w=1200&q=90'); }
+.region-6 { background-image:url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1200&q=90'); }
+.map-legend {
+  margin-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.map-chip {
+  padding:7px 11px;
+  border:1px solid #302725;
+  color:#968b83;
+  font:600 .65rem Cinzel,serif;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  background:rgba(6,5,5,.68);
+}
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:46px;
+}
+.gallery-item {
+  position:relative;
+  height:310px;
+  overflow:hidden;
+  border:1px solid #322823;
+  background:#090909;
+}
+.gallery-item img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.42) contrast(1.16) brightness(.55);
+  transition:transform .75s ease,filter .75s ease;
+}
+.gallery-item:hover img,
+.gallery-item:focus-within img {
+  transform:scale(1.07);
+  filter:saturate(.58) contrast(1.12) brightness(.7);
+}
+.gallery-item figcaption {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:18px;
+  color:#d2c8c0;
+  background:linear-gradient(transparent,rgba(0,0,0,.9));
+  font:700 .7rem Cinzel,serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.gallery-item.is-error { background:linear-gradient(140deg,#151010,#050505); }
+.gallery-item.is-error::after {
+  content:"VISION LOST";
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  color:#7b1717;
+  font:800 .85rem Cinzel,serif;
+  letter-spacing:.2em;
+}
+.court-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:46px;
+}
+.court-card {
+  min-height:240px;
+  padding:28px;
+  border:1px solid #2f2723;
+  background:rgba(7,6,6,.77);
+  box-shadow:var(--shadow);
+  transition:transform .35s ease,border-color .35s ease;
+}
+.court-card:hover { transform:translateY(-4px);border-color:#5c1515; }
+.court-symbol { font-size:2rem;filter:grayscale(.3); }
+.court-card h3 {
+  margin:16px 0 10px;
+  color:#e6dbd2;
+  font:800 1.03rem Cinzel,serif;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.court-card p { margin:0;color:#b6ada5;line-height:1.7; }
+.timeline {
+  position:relative;
+  margin-top:48px;
+  padding-left:27px;
+}
+.timeline::before {
+  content:"";
+  position:absolute;
+  left:7px;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:linear-gradient(#631010,#2e2824,transparent);
+}
+.timeline-item {
+  position:relative;
+  padding:0 0 32px 28px;
+}
+.timeline-item::before {
+  content:"";
+  position:absolute;
+  left:-25px;
+  top:3px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#6f1111;
+  box-shadow:0 0 14px rgba(160,0,0,.62);
+}
+.timeline-item:last-child { padding-bottom:0; }
+.timeline-date {
+  color:#8b2c29;
+  font:800 .67rem Cinzel,serif;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.timeline-item h3 {
+  margin:9px 0 8px;
+  color:#e5dad2;
+  font:700 1.05rem Cinzel,serif;
+  text-transform:uppercase;
+}
+.timeline-item p { margin:0;color:#b6aca4;line-height:1.75; }
+.oath-section {
+  text-align:center;
+  padding:150px 0 140px;
+}
+.oath-frame {
+  max-width:980px;
+  margin:auto;
+  padding:55px 34px;
+  border-top:1px solid #4a2821;
+  border-bottom:1px solid #4a2821;
+  background:radial-gradient(ellipse at center,rgba(70,0,0,.08),transparent 66%);
+}
+.oath-frame blockquote {
+  margin:25px auto 0;
+  color:#e6ddd5;
+  font-style:italic;
+  font-size:clamp(1.45rem,3.6vw,2.65rem);
+  line-height:1.55;
+  text-shadow:0 0 22px rgba(160,0,0,.18);
+}
+.oath-seal {
+  display:inline-grid;
+  place-items:center;
+  width:64px;
+  height:64px;
+  margin-top:26px;
+  border:1px solid #671313;
+  border-radius:50%;
+  color:#9b2521;
+  font:800 .68rem Cinzel,serif;
+  letter-spacing:.12em;
+}
+.manuscript {
+  margin-top:46px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+.manuscript-card {
+  padding:28px;
+  background:rgba(8,6,6,.8);
+  border:1px solid #2c2521;
+}
+.manuscript-card h3 {
+  margin:0 0 12px;
+  font:700 1rem Cinzel,serif;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.manuscript-card p {
+  margin:0;
+  color:#b7ada5;
+  line-height:1.8;
+}
+.audio-toggle {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:30;
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  padding:0;
+  cursor:pointer;
+  border-radius:50%;
+  border:1px solid #711313;
+  color:#eee;
+  background:rgba(8,4,4,.9);
+  box-shadow:0 0 18px rgba(130,0,0,.24);
+}
+.audio-toggle.active { animation:audio-pulse 1.8s infinite; }
+.audio-toggle:focus-visible { outline:2px solid #bf3b35;outline-offset:3px; }
+.audio-label {
+  position:fixed;
+  right:18px;
+  bottom:72px;
+  z-index:29;
+  padding:7px 9px;
+  color:#958b84;
+  background:rgba(4,3,3,.87);
+  border:1px solid #2d2622;
+  font:600 .58rem Cinzel,serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.72;
+}
+footer {
+  padding:42px 0 54px;
+  border-top:1px solid rgba(66,48,40,.55);
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));
+  text-align:center;
+}
+.footer-title {
+  color:#d7ccc4;
+  font:800 1rem Cinzel,serif;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.footer-year {
+  margin-top:9px;
+  color:#766d66;
+  font-size:.83rem;
+}
+@keyframes fog-drift {
+  from { transform:translateX(-6%) scale(1.02); }
+  to { transform:translateX(7%) scale(1.08); }
+}
+@keyframes fog-drift-reverse {
+  from { transform:translateX(7%) scale(1.08); }
+  to { transform:translateX(-5%) scale(1.02); }
+}
+@keyframes title-flicker {
+  0%,10%,12%,18%,42%,57%,73%,100% { opacity:1; }
+  11%,17%,56% { opacity:.42; }
+  41%,58% { opacity:.82; }
+  72% { opacity:.28; }
+}
+@keyframes eyes-appear {
+  0% { opacity:0;transform:scale(.5); }
+  14%,72% { opacity:1; }
+  100% { opacity:0;transform:scale(1.22); }
+}
+@keyframes portrait-jitter {
+  0%,95%,100% { transform:translate3d(0,0,0); }
+  96% { transform:translate3d(-1px,1px,0); }
+  97% { transform:translate3d(1px,-1px,0); }
+  98% { transform:translate3d(-2px,0,0); }
+}
+@keyframes screen-flash {
+  0%,92%,100% { opacity:0; }
+  93% { opacity:.025; }
+  94% { opacity:0; }
+}
+@keyframes cue-pulse {
+  0%,100% { opacity:.25;transform:scaleY(.7);transform-origin:top; }
+  50% { opacity:1;transform:scaleY(1); }
+}
+@keyframes audio-pulse {
+  50% { box-shadow:0 0 30px rgba(180,0,0,.5); }
+}
+@media (max-width:980px) {
+  .two-column,.princess-layout { grid-template-columns:1fr; }
+  .story-grid,.region-grid,.court-grid { grid-template-columns:repeat(2,1fr); }
+  .lore-visual { min-height:400px; }
+  .piuu-portrait { min-height:580px;max-width:620px;width:100%; }
+}
+@media (max-width:680px) {
+  .section { padding:88px 0; }
+  .site-header { padding:14px 0; }
+  .nav-links { display:none; }
+  .hero { padding:120px 0 80px; }
+  .hero-title { font-size:clamp(3.8rem,21vw,7rem); }
+  .hero-tag { letter-spacing:.13em; }
+  .panel { padding:26px; }
+  .story-grid,.region-grid,.gallery-grid,.court-grid,.manuscript { grid-template-columns:1fr; }
+  .gallery-item { height:270px; }
+  .power-item { grid-template-columns:52px 1fr; }
+  .oath-frame { padding:42px 20px; }
+  .audio-toggle { right:14px;bottom:14px; }
+  .audio-label { right:14px;bottom:68px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .fog-layer,.fog-layer::before,.fog-layer::after,.hero-title,.piuu-portrait,.screen-glitch,.audio-toggle.active,.scroll-cue::after { animation:none; }
+  .reveal { opacity:1;transform:none;transition:none; }
+  .region-card,.gallery-item img,.court-card,.enter-button { transition:none; }
+}
 </style>
 </head>
 <body>
-<canvas id="embers" aria-hidden="true"></canvas><div class="fog" aria-hidden="true"></div><div class="fog2" aria-hidden="true"></div><div class="screen-flash" aria-hidden="true"></div><div class="spider" aria-hidden="true">🕷</div><div class="ghost" aria-hidden="true">👻</div>
-<header><div class="wrap nav"><div class="brand">PIUKISTAN</div><nav class="links" aria-label="Primary"><a href="#lore">Lore</a><a href="#princess">Piuu</a><a href="#provinces">Provinces</a><a href="#gallery">Visions</a><a href="#court">Court</a><a href="#oath">Oath</a></nav></div></header>
-<main>
-<section class="hero" id="top"><div class="eyes" id="eyes" aria-hidden="true"></div><div class="wrap hero-inner fade"><div class="eyebrow">Beyond the last light</div><h1>PIUKISTAN</h1><div class="tag">Kingdom of the Damned</div><p class="subtitle">Where no sun has ever risen, and no prayer has ever been answered — a throne of bone sits at the center of the world's oldest nightmare, and upon it sits <strong>Piuu</strong>.</p><button class="enter" id="enterBtn" type="button">🕯 Enter the Kingdom</button></div></section>
-<section class="section" id="lore"><div class="wrap grid2"><div class="fade"><div class="eyebrow">I. The first wound</div><h2>The Realm Beyond Light</h2><p class="lead">Piukistan is not a kingdom drawn on any mortal map. It is a wound torn into the world — a place where black rivers pass beneath dead forests, where the air tastes of iron, and where every road eventually circles back to the same forgotten throne.</p><p class="lead">At the <em>Gathering of the Damned</em>, the old orders brought their crowns, chains, curses, and names before a throne carved from ancient bone. Piuu rose without herald or trumpet. The dead bowed first. The living followed.</p></div><div class="lore-art fade" role="img" aria-label="Dark misty forest" ></div></div></section>
-<section class="section" id="princess"><div class="wrap princess"><div class="portrait fade" role="img" aria-label="Hooded sovereign of the Bone Throne"></div><div class="fade"><div class="eyebrow">II. The sovereign</div><h2>Piuu, Sovereign of the Unholy Throne</h2><p class="lead">They say Piuu does not sit upon the Bone Throne so much as command it. Every rib in its frame is said to remember a different oath, and every oath is still binding.</p><div class="powers"><div class="power"><strong>01 — Crown of Devils:</strong> commands the infernal hosts beneath the throne.</div><div class="power"><strong>02 — The First Curse:</strong> speaks words older than the oldest grave.</div><div class="power"><strong>03 — Veilwalking:</strong> crosses the world through a shadow no lantern can reveal.</div><div class="power"><strong>04 — Black Reign:</strong> bends the dead forests, marshes, and rivers to her will.</div><div class="power"><strong>05 — Unending Throne:</strong> cannot be forgotten while one shadow remains.</div></div></div></div></section>
-<section class="section" id="provinces"><div class="wrap"><div class="fade"><div class="eyebrow">III. Six dominions</div><h2>The Five Cursed Provinces</h2></div><div class="provinces"><article class="region r1 fade"><div class="content"><h3>Ashfall Wastes</h3><p>Grey plains where embers fall upward and the soil remembers every burned name.</p></div></article><article class="region r2 fade"><div class="content"><h3>Hollow Marsh</h3><p>Black water beneath a moon that never moves; footsteps continue after you stop.</p></div></article><article class="region r3 fade"><div class="content"><h3>Bramblewood Coven</h3><p>A forest of hooked thorns where unseen circles gather between the trunks.</p></div></article><article class="region r4 fade"><div class="content"><h3>Veil of Sorrows</h3><p>Mist thick with voices, old grief, and roads that dissolve behind the traveler.</p></div></article><article class="region r5 fade"><div class="content"><h3>Bone Orchard</h3><p>White trees grown from ancient remains, their branches ringing without wind.</p></div></article><article class="region r6 fade"><div class="content"><h3>Throne Hollow</h3><p>The sunless center of the realm, where the Bone Throne waits beneath a ruined sky.</p></div></article></div></div></section>
-<section class="section" id="gallery"><div class="wrap"><div class="fade"><div class="eyebrow">IV. Forbidden sightings</div><h2>Visions of Piukistan</h2></div><div class="gallery"><figure class="fade"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80" alt="Dark ruined forest" onerror="this.style.display='none'"></figure><figure class="fade"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80" alt="Gnarled dead tree in fog" onerror="this.style.display='none'"></figure><figure class="fade"><img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=1200&q=80" alt="Dark skull-like stone form" onerror="this.style.display='none'"></figure><figure class="fade"><img src="https://images.unsplash.com/photo-1476362555312-ab9e108a0b7e?auto=format&fit=crop&w=1200&q=80" alt="Abandoned gothic-looking structure" onerror="this.style.display='none'"></figure><figure class="fade"><img src="https://images.unsplash.com/photo-1504532724559-22878efd5337?auto=format&fit=crop&w=1200&q=80" alt="Misty graveyard-like landscape" onerror="this.style.display='none'"></figure><figure class="fade"><img src="https://images.unsplash.com/photo-1517991104123-1d56a6e81edb?auto=format&fit=crop&w=1200&q=80" alt="Dark weathered building at night" onerror="this.style.display='none'"></figure></div></div></section>
-<section class="section" id="court"><div class="wrap"><div class="fade"><div class="eyebrow">V. The orders</div><h2>Court of the Damned</h2></div><div class="court"><article class="creature fade"><div class="emoji">👹</div><h3>Devils</h3><p>Iron-tongued heralds who carry the commands of the throne into the deep.</p></article><article class="creature fade"><div class="emoji">👻</div><h3>Chudhails</h3><p>Night-stalking spirits whose laughter drifts from rooftops long after midnight.</p></article><article class="creature fade"><div class="emoji">🧙‍♀️</div><h3>Witches</h3><p>Keepers of thorn-script, bone sigils, and the secret names of the provinces.</p></article><article class="creature fade"><div class="emoji">🌑</div><h3>Dayans</h3><p>Shadow-feeders that move where lamps fail and leave no reflection behind.</p></article><article class="creature fade"><div class="emoji">⛓️</div><h3>Cursed Spirits</h3><p>Bound remnants of the damned, chained to unfinished vows and broken doors.</p></article><article class="creature fade"><div class="emoji">👑</div><h3>Royal Guard</h3><p>Silent sentinels sworn to defend the Bone Throne until the last star dies.</p></article></div></div></section>
-<section class="oath" id="oath"><div class="wrap fade"><div class="eyebrow">VI. The binding</div><h2>The Oath of Shadows</h2><blockquote>“By ash, by marsh, by thorn and veil and bone — every dark thing that walks answers to one throne. Piukistan does not end. It only waits.”</blockquote><div class="sig">— Oathkeeper of Throne Hollow</div></div></section>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="emberCanvas" aria-hidden="true"></canvas>
+<div class="fog-layer" aria-hidden="true"></div>
+<div class="screen-glitch" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">PIUKISTAN</div>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#lore">Lore</a>
+      <a href="#puuu">Piuu</a>
+      <a href="#provinces">Provinces</a>
+      <a href="#visions">Visions</a>
+      <a href="#court">Court</a>
+      <a href="#chronicle">Chronicle</a>
+      <a href="#oath">Oath</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="eye-field" id="eyeField" aria-hidden="true"></div>
+  <div class="hero-content container reveal">
+    <p class="pre-title">Beyond the last light</p>
+    <h1 class="hero-title">PIUKISTAN</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-tag">Kingdom of the Damned</p>
+    <p class="hero-description">Where no sun has ever risen, and no prayer has ever been answered — a throne of bone sits at the center of the world's oldest nightmare, and upon it sits <strong>Piuu</strong>.</p>
+    <button class="enter-button" id="enterButton" type="button">🕯 Enter the Kingdom</button>
+    <div class="hero-status" id="audioStatus">The kingdom is listening.</div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Descend</div>
+</section>
+<section class="section" id="lore">
+  <div class="container">
+    <div class="two-column">
+      <div class="panel reveal">
+        <p class="section-kicker">I · The first wound</p>
+        <h2 class="section-title">The Realm Beyond Light</h2>
+        <p>Piukistan is not hidden behind an ordinary mountain range, nor fenced behind a border that any army could patrol. It is a wound torn directly into the world — an impossible kingdom occupying the space between the final heartbeat of one reality and the first breath of another.</p>
+        <p>There is no morning in Piukistan. The sky hangs permanently beneath a bruise-colored dusk, and the clouds drag across the heavens like vast pieces of mourning cloth. Rivers run black beneath stone bridges. Forests grow without permission. Bells ring in towers whose foundations have vanished.</p>
+        <p>Travelers who find the old road often report hearing their own names whispered from the trees. They follow the sound because the human mind is unreasonably curious about the familiar. The road rewards that curiosity by returning them to where they started — older, colder, and unable to remember why they wanted to leave.</p>
+        <p>At the heart of this sunless territory stands Throne Hollow. There, beneath a broken crown of stone, the Bone Throne waits for the sovereign who commands every curse that survived the first darkness.</p>
+      </div>
+      <div class="lore-visual reveal" role="img" aria-label="Ancient dark forest path under heavy mist"></div>
+    </div>
+    <div class="story-grid">
+      <article class="story-card reveal"><span class="number">01 / ARRIVAL</span><h3>The Last Road</h3><p>The final road is visible only after sunset. It appears where no road existed the night before.</p></article>
+      <article class="story-card reveal"><span class="number">02 / DESCENT</span><h3>The Black River</h3><p>The river has no source. The current moves toward the center of Piukistan, carrying broken lanterns and forgotten vows.</p></article>
+      <article class="story-card reveal"><span class="number">03 / CROWN</span><h3>The Gathering</h3><p>Every ancient order came to the Gathering of the Damned. No faction arrived without bringing a tribute of fear.</p></article>
+      <article class="story-card reveal"><span class="number">04 / THRONE</span><h3>The Bone Seat</h3><p>Thousands of pale fragments were fused into the throne. Each fragment remembers the voice of its owner.</p></article>
+      <article class="story-card reveal"><span class="number">05 / OATH</span><h3>The Binding</h3><p>The provinces swore themselves into one dominion. Their separate curses became a single command.</p></article>
+      <article class="story-card reveal"><span class="number">06 / WAITING</span><h3>The Kingdom Waits</h3><p>Piukistan does not expand like an empire. It simply becomes nearer whenever the living forget to look behind them.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section" id="puuu">
+  <div class="container">
+    <div class="princess-layout">
+      <div class="piuu-portrait reveal" role="img" aria-label="Dark pale-faced woman with long black hair, inspired by classic supernatural horror imagery"></div>
+      <div class="reveal">
+        <p class="section-kicker">II · The sovereign</p>
+        <h2 class="section-title">Piuu, Sovereign of the Unholy Throne</h2>
+        <p class="piuu-intro">Piuu is spoken of in lower voices than the dead themselves use. Her presence is imagined as a pale figure framed by long black hair, a silhouette that seems almost human until the darkness around it begins moving in directions the body never did. She does not need to chase anyone. Fear travels ahead of her.</p>
+        <p class="piuu-intro">The ancient orders describe her coronation differently, yet every account agrees on one fact: the Bone Throne recognized her before the court did. When Piuu placed one hand upon the throne, the candles in Throne Hollow burned black, the bells stopped, and every creature in the chamber lowered its head.</p>
+        <div class="quote-box">
+          <blockquote>“A throne of bone is still a throne. It only asks a harsher question of the one who sits upon it.”</blockquote>
+          <cite>Fragment of the Hollow Chronicle</cite>
+        </div>
+        <div class="power-list">
+          <article class="power-item reveal"><div class="power-index">I</div><div><h3>Command of Devils</h3><p>Infernal hosts answer to her summons, their orders carried through cracks in stone and smoke.</p></div></article>
+          <article class="power-item reveal"><div class="power-index">II</div><div><h3>The First Curse</h3><p>Piuu speaks a language older than written history. A single sentence is enough to turn a blessing into a burden.</p></div></article>
+          <article class="power-item reveal"><div class="power-index">III</div><div><h3>Veilwalking</h3><p>She can cross from one shadow to another without crossing the space between them.</p></div></article>
+          <article class="power-item reveal"><div class="power-index">IV</div><div><h3>Black Reign</h3><p>The forests, marshes, ash plains, and silent towers shift according to her will.</p></div></article>
+          <article class="power-item reveal"><div class="power-index">V</div><div><h3>Unending Memory</h3><p>Forgetting Piuu is impossible once the kingdom has spoken her name to you.</p></div></article>
+        </div>
+      </div>
+    </div>
+    <div class="legend-banner reveal"><p>In the oldest telling, Piuu was not crowned because she conquered the realm. She was crowned because the realm had already chosen her.</p></div>
+  </div>
+</section>
+<section class="section" id="provinces">
+  <div class="container">
+    <p class="section-kicker reveal">III · Six dominions</p>
+    <h2 class="section-title reveal">The Five Cursed Provinces</h2>
+    <p class="section-subtitle reveal">Maps disagree about the number because Piukistan is larger at night. Six names appear in the royal archives; five are called provinces, while the sixth is Throne Hollow — the seat from which all five are bound.</p>
+    <div class="region-grid">
+      <article class="region-card region-1 reveal"><div class="region-content"><span class="region-code">PROVINCE 01</span><h3>Ashfall Wastes</h3><p>Grey plains where warm ash falls from a sky without fire. Footprints survive here for centuries.</p></div></article>
+      <article class="region-card region-2 reveal"><div class="region-content"><span class="region-code">PROVINCE 02</span><h3>Hollow Marsh</h3><p>Black water, drowned reeds, and paths that shift after every spoken sentence.</p></div></article>
+      <article class="region-card region-3 reveal"><div class="region-content"><span class="region-code">PROVINCE 03</span><h3>Bramblewood Coven</h3><p>A forest of hooked vines where the witches gather around circles older than the trees.</p></div></article>
+      <article class="region-card region-4 reveal"><div class="region-content"><span class="region-code">PROVINCE 04</span><h3>Veil of Sorrows</h3><p>A silver-gray fog covers the land. The voices inside it know things you never told anyone.</p></div></article>
+      <article class="region-card region-5 reveal"><div class="region-content"><span class="region-code">PROVINCE 05</span><h3>Bone Orchard</h3><p>Pale branches rise from ancient remains, ringing softly whenever someone dies beyond the boundary.</p></div></article>
+      <article class="region-card region-6 reveal"><div class="region-content"><span class="region-code">THRONE 06</span><h3>Throne Hollow</h3><p>The sunless center of the realm. At midnight, the Bone Throne can be heard breathing.</p></div></article>
+    </div>
+    <div class="map-legend reveal"><span class="map-chip">ASH</span><span class="map-chip">MARSH</span><span class="map-chip">THORN</span><span class="map-chip">VEIL</span><span class="map-chip">BONE</span><span class="map-chip">THRONE</span></div>
+  </div>
+</section>
+<section class="section" id="visions">
+  <div class="container">
+    <p class="section-kicker reveal">IV · Forbidden sightings</p>
+    <h2 class="section-title reveal">Visions of Piukistan</h2>
+    <p class="section-subtitle reveal">The kingdom is remembered through fragments: trees bent by invisible weather, ruins swallowed by darkness, stone paths disappearing into mist, and shapes that remain just outside the frame.</p>
+    <div class="gallery-grid">
+      <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=90" alt="Dense dark forest with tall trees and deep shadow" loading="lazy"><figcaption>Forest of the Last Breath</figcaption></figure>
+      <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=90" alt="Gnarled tree branches in a dark woodland" loading="lazy"><figcaption>The Bent Grove</figcaption></figure>
+      <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=1200&q=90" alt="Dark gothic skull-like stone detail" loading="lazy"><figcaption>Watcher of Bone Orchard</figcaption></figure>
+      <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1476362555312-ab9e108a0b7e?auto=format&fit=crop&w=1200&q=90" alt="Abandoned dark structure beneath stormy sky" loading="lazy"><figcaption>Ruins Beyond the Veil</figcaption></figure>
+      <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1504532724559-22878efd5337?auto=format&fit=crop&w=1200&q=90" alt="Foggy graveyard-like landscape under a dim sky" loading="lazy"><figcaption>Field of Unanswered Prayers</figcaption></figure>
+      <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1200&q=90" alt="Dark weathered architecture in shadow" loading="lazy"><figcaption>Throne Hollow Gate</figcaption></figure>
+    </div>
+  </div>
+</section>
+<section class="section" id="court">
+  <div class="container">
+    <p class="section-kicker reveal">V · The orders</p>
+    <h2 class="section-title reveal">Court of the Damned</h2>
+    <p class="section-subtitle reveal">Six orders are permitted to stand within the inner court. They do not share loyalty. They share fear of disappointing the throne.</p>
+    <div class="court-grid">
+      <article class="court-card reveal"><div class="court-symbol">👹</div><h3>Devils</h3><p>Iron-tongued heralds carrying the sovereign's orders into places where ordinary messengers would die.</p></article>
+      <article class="court-card reveal"><div class="court-symbol">👻</div><h3>Chudhails</h3><p>Restless spirits of the midnight roads, recognized by their laughter before they are seen.</p></article>
+      <article class="court-card reveal"><div class="court-symbol">🧙‍♀️</div><h3>Witches</h3><p>Keepers of curse-script, thorn sigils, smoke rites, and the secret names of forbidden doors.</p></article>
+      <article class="court-card reveal"><div class="court-symbol">🌑</div><h3>Dayans</h3><p>Predators of shadow who haunt thresholds and leave their victims unable to remember daylight.</p></article>
+      <article class="court-card reveal"><div class="court-symbol">⛓️</div><h3>Cursed Spirits</h3><p>Bound remnants of the dead, attached to vows that were never fulfilled and doors that never opened.</p></article>
+      <article class="court-card reveal"><div class="court-symbol">👑</div><h3>Royal Guard</h3><p>Silent sentinels sworn to the Bone Throne. Their armor is never removed inside Throne Hollow.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section" id="chronicle">
+  <div class="container">
+    <p class="section-kicker reveal">VI · Fragments of the royal record</p>
+    <h2 class="section-title reveal">The Hollow Chronicle</h2>
+    <p class="section-subtitle reveal">The surviving pages do not form a clean history. They form a trail of warnings written by people who believed somebody else would be the one to read them.</p>
+    <div class="timeline">
+      <article class="timeline-item reveal"><div class="timeline-date">Before the dawn</div><h3>The First Shadow</h3><p>An unnamed darkness appears in the oldest surviving inscription. It is described not as a creature, but as a place that has learned to move.</p></article>
+      <article class="timeline-item reveal"><div class="timeline-date">The Black River Year</div><h3>The Rivers Change</h3><p>All waterways in the territory turn dark. The water becomes unnaturally still near moonless nights.</p></article>
+      <article class="timeline-item reveal"><div class="timeline-date">The Gathering</div><h3>The Orders Arrive</h3><p>Devils, witches, spirits, chudhails, dayans, and the royal guard assemble beneath the ruined crown of Throne Hollow.</p></article>
+      <article class="timeline-item reveal"><div class="timeline-date">The Coronation Night</div><h3>Piuu Takes the Throne</h3><p>Piuu touches the Bone Throne. Every candle extinguishes simultaneously. When they return, their flames burn red.</p></article>
+      <article class="timeline-item reveal"><div class="timeline-date">After the oath</div><h3>The Kingdom Becomes One</h3><p>The provinces lose their separate seals. A single sigil appears above every gate: a crown above a line of bone.</p></article>
+      <article class="timeline-item reveal"><div class="timeline-date">Still happening</div><h3>The Waiting</h3><p>The chronicle ends mid-sentence. The final surviving words read: “She is still awake. The road is getting closer.”</p></article>
+    </div>
+    <div class="manuscript">
+      <article class="manuscript-card reveal"><h3>The Coronation Bell</h3><p>One bell remains in Throne Hollow. It is never pulled by a hand. Its sound is heard only by those Piuu has noticed.</p></article>
+      <article class="manuscript-card reveal"><h3>The Nameless Door</h3><p>Every province contains a door that should not be there. None of them open from the same side twice.</p></article>
+      <article class="manuscript-card reveal"><h3>The Black Candles</h3><p>When ordinary flame enters Piukistan, it burns normally for a moment and then remembers that it was supposed to be dark.</p></article>
+      <article class="manuscript-card reveal"><h3>The Empty Crown</h3><p>Before Piuu's reign, the royal crown sat without a head. After her arrival, the crown is never seen without a shadow beneath it.</p></article>
+    </div>
+  </div>
+</section>
+<section class="oath-section" id="oath">
+  <div class="container">
+    <div class="oath-frame reveal">
+      <p class="section-kicker">VII · The binding</p>
+      <h2 class="section-title">The Oath of Shadows</h2>
+      <blockquote>“By ash, by marsh, by thorn and veil and bone — every dark thing that walks answers to one throne. Piukistan does not end. It only waits.”</blockquote>
+      <div class="oath-seal" aria-hidden="true">PIUU</div>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="wrap"><div class="foot-title">Piukistan</div><div class="year">© <span id="year"></span></div></div></footer>
-<button class="audio" id="audioBtn" type="button" aria-label="Toggle ambient audio" aria-pressed="false">🔇</button>
+<footer>
+  <div class="container">
+    <div class="footer-title">Piukistan</div>
+    <div class="footer-year">© <span id="year"></span></div>
+  </div>
+</footer>
+<div class="audio-label" id="audioLabel">Ambient: OFF</div>
+<button class="audio-toggle" id="audioToggle" type="button" aria-label="Toggle ambient horror audio" aria-pressed="false">🔇</button>
 <script>
 (() => {
-const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const year=document.getElementById('year'); year.textContent=new Date().getFullYear();
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12}); document.querySelectorAll('.fade').forEach(el=>io.observe(el));
-const eyeField=document.getElementById('eyes');
-function spawnEyes(){ if(reduced||!eyeField)return; const p=document.createElement('span'); p.className='eye-pair'; p.style.left=(8+Math.random()*84)+'%'; p.style.top=(8+Math.random()*78)+'%'; p.style.animationDelay=(Math.random()*.4)+'s'; p.style.animationDuration=(2.5+Math.random()*3)+'s'; eyeField.appendChild(p); setTimeout(()=>p.remove(),6200); }
-setInterval(spawnEyes,reduced?999999:900); for(let i=0;i<7;i++) setTimeout(spawnEyes,i*380);
-const canvas=document.getElementById('embers'),ctx=canvas.getContext('2d'); let particles=[];
-function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
-addEventListener('resize',resize);resize();
-function seed(){particles=Array.from({length:reduced?0:90},()=>({x:Math.random()*innerWidth,y:innerHeight+Math.random()*innerHeight,vx:(Math.random()-.5)*.35,vy:-(.2+Math.random()*.9),s:.5+Math.random()*1.8,a:.25+Math.random()*.55}));} seed();
-function emberLoop(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const q of particles){q.x+=q.vx+Math.sin(q.y*.01)*.12;q.y+=q.vy;if(q.y<-10){q.y=innerHeight+5;q.x=Math.random()*innerWidth}ctx.globalAlpha=q.a;ctx.fillStyle='#a84a1e';ctx.beginPath();ctx.arc(q.x,q.y,q.s,0,Math.PI*2);ctx.fill()}requestAnimationFrame(emberLoop)} emberLoop();
-let ac=null,master=null,running=false,heartbeatTimer=null;
-function makeNoise(duration=1){if(!ac)return;const buffer=ac.createBuffer(1,ac.sampleRate*duration,ac.sampleRate),data=buffer.getChannelData(0);for(let i=0;i<data.length;i++){data[i]=(Math.random()*2-1)*Math.pow(1-i/data.length,2)}const src=ac.createBufferSource(),gain=ac.createGain(),filter=ac.createBiquadFilter();src.buffer=buffer;filter.type='bandpass';filter.frequency.value=450+Math.random()*700;filter.Q.value=2;gain.gain.setValueAtTime(.0001,ac.currentTime);gain.gain.exponentialRampToValueAtTime(.025,ac.currentTime+.04);gain.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+duration);src.connect(filter).connect(gain).connect(master);src.start();src.stop(ac.currentTime+duration)}
-function thump(){if(!ac)return;const o=ac.createOscillator(),g=ac.createGain(),f=ac.createBiquadFilter();o.type='sine';o.frequency.setValueAtTime(75,ac.currentTime);o.frequency.exponentialRampToValueAtTime(48,ac.currentTime+.28);f.type='lowpass';f.frequency.value=130;g.gain.setValueAtTime(.0001,ac.currentTime);g.gain.exponentialRampToValueAtTime(.12,ac.currentTime+.025);g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+.34);o.connect(f).connect(g).connect(master);o.start();o.stop(ac.currentTime+.35);}
-function whisper(){makeNoise(.5+Math.random()*.8)}
-function startAudio(){if(running)return;if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();master=ac.createGain();master.gain.value=.22;master.connect(ac.destination);const osc=ac.createOscillator(),lfo=ac.createOscillator(),lg=ac.createGain(),dg=ac.createGain();osc.type='sawtooth';osc.frequency.value=43;lfo.frequency.value=.08;lg.gain.value=8;lfo.connect(lg).connect(osc.frequency);osc.connect(dg);dg.gain.value=.018;dg.connect(master);osc.start();lfo.start();}ac.resume();running=true;document.getElementById('audioBtn').classList.add('on');document.getElementById('audioBtn').textContent='🔊';document.getElementById('audioBtn').setAttribute('aria-pressed','true');heartbeatTimer=setInterval(()=>{thump();setTimeout(thump,170)},3600+Math.random()*2500);setInterval(()=>{if(running)whisper()},5200+Math.random()*2800)}
-function stopAudio(){if(!ac)return;running=false;master.gain.setTargetAtTime(.0001,ac.currentTime,.06);document.getElementById('audioBtn').classList.remove('on');document.getElementById('audioBtn').textContent='🔇';document.getElementById('audioBtn').setAttribute('aria-pressed','false');if(heartbeatTimer)clearInterval(heartbeatTimer);setTimeout(()=>master.gain.value=.22,400)}
-const btn=document.getElementById('audioBtn'),enter=document.getElementById('enterBtn');btn.addEventListener('click',()=>running?stopAudio():startAudio());enter.addEventListener('click',()=>running?stopAudio():startAudio());
-let armed=false;function arm(){if(!armed){armed=true;startAudio()}}['pointerdown','touchstart','scroll','keydown'].forEach(ev=>addEventListener(ev,arm,{once:true,passive:true}));
+  'use strict';
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
+    });
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+  const eyeField = document.getElementById('eyeField');
+  function spawnEyes() {
+    if (reducedMotion || !eyeField) return;
+    const pair = document.createElement('span');
+    pair.className = 'eye-pair';
+    pair.style.left = (5 + Math.random() * 88) + '%';
+    pair.style.top = (6 + Math.random() * 84) + '%';
+    pair.style.animationDuration = (2.8 + Math.random() * 3.2) + 's';
+    pair.style.animationDelay = (Math.random() * .4) + 's';
+    eyeField.appendChild(pair);
+    window.setTimeout(() => pair.remove(), 7000);
+  }
+  if (!reducedMotion) {
+    for (let i = 0; i < 10; i++) window.setTimeout(spawnEyes, i * 330);
+    window.setInterval(spawnEyes, 1100);
+  }
+
+  const canvas = document.getElementById('emberCanvas');
+  const ctx = canvas ? canvas.getContext('2d') : null;
+  let particles = [];
+  function resizeCanvas() {
+    if (!canvas || !ctx) return;
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(window.innerWidth * ratio);
+    canvas.height = Math.floor(window.innerHeight * ratio);
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+    ctx.setTransform(ratio,0,0,ratio,0,0);
+  }
+  function seedParticles() {
+    const total = reducedMotion ? 0 : 105;
+    particles = Array.from({ length: total }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: window.innerHeight + Math.random() * window.innerHeight,
+      vx: (Math.random() - .5) * .35,
+      vy: -(0.22 + Math.random() * .82),
+      size: .45 + Math.random() * 1.6,
+      alpha: .16 + Math.random() * .58,
+      phase: Math.random() * Math.PI * 2
+    }));
+  }
+  function drawParticles() {
+    if (!canvas || !ctx) return;
+    ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+    particles.forEach((p) => {
+      p.x += p.vx + Math.sin(p.y * .012 + p.phase) * .12;
+      p.y += p.vy;
+      if (p.y < -10) {
+        p.y = window.innerHeight + 8;
+        p.x = Math.random() * window.innerWidth;
+      }
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = '#a34820';
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(drawParticles);
+  }
+  resizeCanvas();
+  seedParticles();
+  drawParticles();
+  window.addEventListener('resize', () => { resizeCanvas(); seedParticles(); }, { passive:true });
+
+  let audioContext = null;
+  let master = null;
+  let droneGain = null;
+  let droneOsc = null;
+  let droneLfo = null;
+  let running = false;
+  let heartbeatInterval = null;
+  let whisperInterval = null;
+  let userStarted = false;
+
+  function makeNoiseBurst(duration, volume) {
+    if (!audioContext || !master || !running) return;
+    const buffer = audioContext.createBuffer(1, Math.floor(audioContext.sampleRate * duration), audioContext.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < data.length; i++) {
+      const taper = Math.pow(1 - i / data.length, 1.7);
+      data[i] = (Math.random() * 2 - 1) * taper;
+    }
+    const source = audioContext.createBufferSource();
+    const filter = audioContext.createBiquadFilter();
+    const gain = audioContext.createGain();
+    filter.type = 'bandpass';
+    filter.frequency.value = 420 + Math.random() * 900;
+    filter.Q.value = 2.8;
+    gain.gain.setValueAtTime(.0001, audioContext.currentTime);
+    gain.gain.exponentialRampToValueAtTime(volume, audioContext.currentTime + .04);
+    gain.gain.exponentialRampToValueAtTime(.0001, audioContext.currentTime + duration);
+    source.buffer = buffer;
+    source.connect(filter).connect(gain).connect(master);
+    source.start();
+    source.stop(audioContext.currentTime + duration);
+  }
+
+  function heartbeat() {
+    if (!audioContext || !master || !running) return;
+    const now = audioContext.currentTime;
+    const osc = audioContext.createOscillator();
+    const filter = audioContext.createBiquadFilter();
+    const gain = audioContext.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(74, now);
+    osc.frequency.exponentialRampToValueAtTime(45, now + .27);
+    filter.type = 'lowpass';
+    filter.frequency.value = 145;
+    gain.gain.setValueAtTime(.0001, now);
+    gain.gain.exponentialRampToValueAtTime(.13, now + .025);
+    gain.gain.exponentialRampToValueAtTime(.0001, now + .34);
+    osc.connect(filter).connect(gain).connect(master);
+    osc.start(now);
+    osc.stop(now + .36);
+  }
+
+  function createAudio() {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    master = audioContext.createGain();
+    master.gain.value = .2;
+    master.connect(audioContext.destination);
+
+    droneGain = audioContext.createGain();
+    droneGain.gain.value = .017;
+    droneOsc = audioContext.createOscillator();
+    droneOsc.type = 'sawtooth';
+    droneOsc.frequency.value = 41;
+
+    const droneFilter = audioContext.createBiquadFilter();
+    droneFilter.type = 'lowpass';
+    droneFilter.frequency.value = 180;
+    droneFilter.Q.value = 1.1;
+
+    droneLfo = audioContext.createOscillator();
+    const lfoGain = audioContext.createGain();
+    droneLfo.type = 'sine';
+    droneLfo.frequency.value = .085;
+    lfoGain.gain.value = 7.5;
+    droneLfo.connect(lfoGain).connect(droneOsc.frequency);
+    droneOsc.connect(droneFilter).connect(droneGain).connect(master);
+    droneOsc.start();
+    droneLfo.start();
+  }
+
+  function updateAudioUI() {
+    const button = document.getElementById('audioToggle');
+    const label = document.getElementById('audioLabel');
+    const status = document.getElementById('audioStatus');
+    if (!button) return;
+    button.classList.toggle('active', running);
+    button.textContent = running ? '🔊' : '🔇';
+    button.setAttribute('aria-pressed', String(running));
+    if (label) label.textContent = running ? 'Ambient: ON' : 'Ambient: OFF';
+    if (status) status.textContent = running ? 'The kingdom has heard you.' : 'The kingdom is listening.';
+  }
+
+  async function startAudio() {
+    if (running) return;
+    try {
+      if (!audioContext) createAudio();
+      if (audioContext.state === 'suspended') await audioContext.resume();
+      running = true;
+      heartbeatInterval = window.setInterval(() => {
+        heartbeat();
+        window.setTimeout(heartbeat, 165);
+      }, 4100 + Math.random() * 2400);
+      whisperInterval = window.setInterval(() => makeNoiseBurst(.45 + Math.random() * .7,.023), 5200 + Math.random() * 2900);
+      updateAudioUI();
+    } catch (error) {
+      running = false;
+      updateAudioUI();
+    }
+  }
+
+  function stopAudio() {
+    running = false;
+    if (heartbeatInterval) window.clearInterval(heartbeatInterval);
+    if (whisperInterval) window.clearInterval(whisperInterval);
+    heartbeatInterval = null;
+    whisperInterval = null;
+    if (master && audioContext) {
+      master.gain.setTargetAtTime(.0001,audioContext.currentTime,.06);
+      window.setTimeout(() => {
+        if (master) master.gain.value = .2;
+      }, 300);
+    }
+    updateAudioUI();
+  }
+
+  const audioToggle = document.getElementById('audioToggle');
+  const enterButton = document.getElementById('enterButton');
+  if (audioToggle) audioToggle.addEventListener('click', () => running ? stopAudio() : startAudio());
+  if (enterButton) enterButton.addEventListener('click', () => running ? stopAudio() : startAudio());
+
+  function firstInteraction() {
+    if (userStarted) return;
+    userStarted = true;
+    startAudio();
+  }
+  ['pointerdown','touchstart','wheel','scroll','keydown'].forEach((eventName) => {
+    window.addEventListener(eventName, firstInteraction, { once:true, passive:true });
+  });
+
+  document.querySelectorAll('.gallery-item img').forEach((img) => {
+    img.addEventListener('error', () => {
+      const item = img.closest('.gallery-item');
+      img.remove();
+      if (item) item.classList.add('is-error');
+    });
+  });
 })();
 </script>
 </body>
